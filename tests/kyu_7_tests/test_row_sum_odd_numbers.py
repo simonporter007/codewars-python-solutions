@@ -14,4 +14,7 @@ class RowSumOddNumbersTestCase(unittest.TestCase):
         self.assertEqual(row_sum_odd_numbers(3), 27)
 
     def test_equals_4(self):
+        self.assertEqual(row_sum_odd_numbers(4), 64)
+
+    def test_equals_5(self):
         self.assertEqual(row_sum_odd_numbers(13), 2197)

@@ -1,0 +1,8 @@
+{
+  "python.unitTest.pyTestPath": "tests",
+  "python.unitTest.pyTestArgs": ["--tb=short"],
+  "python.unitTest.pyTestEnabled": true,
+  "python.unitTest.unittestEnabled": false,
+  "python.unitTest.nosetestsEnabled": false,
+  "python.pythonPath": "/home/simon/.local/share/virtualenvs/codewars-python-solutions-FikDK9pK/bin/python"
+}
