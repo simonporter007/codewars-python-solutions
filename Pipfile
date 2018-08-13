@@ -8,6 +8,7 @@ pylint = "<2.0.0"
 pytest-cov = "*"
 coveralls = "*"
 "autopep8" = "*"
+pytest-watch = "*"
 
 [requires]
 python_version = "2.7.6"
