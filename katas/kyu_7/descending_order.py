@@ -11,4 +11,4 @@ Input: 1254859723 Output: 9875543221
 
 
 def Descending_Order(num):
-    return int(''.join(sorted([x for x in str(num)], reverse=True)))
+    return int(''.join(sorted(str(num), reverse=True)))
