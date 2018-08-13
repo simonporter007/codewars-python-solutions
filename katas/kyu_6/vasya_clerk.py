@@ -18,29 +18,18 @@ tickets([25, 25, 50, 50, 100]) # => NO. Vasya will not have the right bills to g
 
 
 def tickets(people):
-    change = list()
-    price = 25
-    for x in people:
-        rc = x - price
-        if rc < 0:
-            return "NO"
-        elif rc > 0:
-            sort_change = sorted(change)
-            for i, c in enumerate(sort_change):
-                if rc in change:
-                    change.pop(change.index(rc))
-                    change.append(x)
-                    rc = 0
-                    break
-                rc -= c
-                if rc == 0:
-                    change.append(x)
-                    break
-                elif rc < 0:
-                    return "NO"
-                change = sort_change[i+1:]
-            if rc > 0:
-                return "NO"
-        else:
-            change.append(x)
-    return "YES"
+    till = {100: 0, 50: 0, 25: 0}
+
+    for paid in people:
+        till[paid] += 1
+        change = paid-25
+
+        for bill in (50, 25):
+            while (bill <= change and till[bill] > 0):
+                till[bill] -= 1
+                change -= bill
+
+        if change != 0:
+            return 'NO'
+
+    return 'YES'
