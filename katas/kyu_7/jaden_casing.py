@@ -9,11 +9,8 @@ Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 Note that the Java version expects a return value of null for an empty string or null.
 '''
-import re
+import string
 
 
 def toJadenCase(quote):
-    return re.sub(r"[A-Za-z]+('[A-Za-z]+)?",
-                  lambda x: x.group(0)[0].upper() +
-                  x.group(0)[1:].lower(),
-                  quote)
+    return string.capwords(quote)
